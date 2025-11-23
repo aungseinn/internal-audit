@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Department Delegation Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800" style="font-family: 'Inter', sans-serif; background-color: #f8fafc;">
+    <!-- Color Palette: Brilliant Blues/Purples -->
+
+    <div class="container max-w-7xl mx-auto p-4 sm:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#003f5c] mb-4">Audit Department Delegation of Authority</h1>
+            <p class="text-xl text-gray-600">A Visual Guide for Olympic Myanmar Apparel Co;Ltd</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[#7a5195] mb-6 text-center">Why Clear Delegation Matters</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+                In a fast-paced retail environment, a clear delegation structure within the Audit Department is crucial. It ensures efficiency, accountability, and allows the team to effectively identify and manage risks, from head-office strategy down to operational processes.
+            </p>
+        </section>
+
+        <!-- Corporate Governance Focus (External Reporting Clarity) -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[#003f5c] mb-8 text-center">Corporate Governance Focus</h2>
+            <div class="bg-indigo-50 border-l-4 border-indigo-500 rounded-lg p-6 max-w-3xl mx-auto shadow-lg">
+                <h3 class="text-xl font-bold text-indigo-700 mb-3">Audit Manager Reporting Line</h3>
+                <p class="text-lg text-indigo-600">
+                    The <span class="font-semibold">Audit Manager</span> is strategically responsible for reporting the final audit findings and risk assessments <span class="font-semibold">directly to the MD (Audit Committee)</span> for strategic oversight and governance compliance.
+                </p>
+            </div>
+        </section>
+        <!-- End External Reporting Clarity -->
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[#7a5195] mb-8 text-center">Delegation Flow (Internal Department)</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-10">
+                Authority flows from the strategic oversight level down through the Audit Department for tactical execution, ensuring clear delegation at every stage.
+            </p>
+            <div class="flex flex-col items-center">
+                <!-- MD (Starts With) -->
+                <div class="bg-white rounded-lg shadow-md p-6 w-full max-w-md text-center mb-4 border-2 border-[#003f5c]">
+                    <span class="text-sm font-semibold text-gray-500">Starts With</span>
+                    <h3 class="text-2xl font-bold text-[#003f5c]">MD (Managing Director)</h3>
+                    <p class="text-gray-600">Strategic Oversight & Compliance</p>
+                </div>
+                <div class="text-5xl text-[#ffa600] mb-4">?</div>
+                <!-- Audit Manager -->
+                <div class="bg-white rounded-lg shadow-md p-6 w-full max-w-md text-center mb-4">
+                    <span class="text-sm font-semibold text-gray-500">Delegates To</span>
+                    <h3 class="text-2xl font-bold text-[#7a5195]">Audit Manager</h3>
+                    <p class="text-gray-600">Departmental Management</p>
+                </div>
+                <div class="text-5xl text-[#ffa600] mb-4">?</div>
+                <!-- Senior Audit -->
+                <div class="bg-white rounded-lg shadow-md p-6 w-full max-w-md text-center mb-4">
+                    <span class="text-sm font-semibold text-gray-500">Delegates To</span>
+                    <h3 class="text-2xl font-bold text-[#bc5090]">Senior Audit (Team Lead)</h3>
+                    <p class="text-gray-600">Fieldwork Supervision</p>
+                </div>
+                <div class="text-5xl text-[#ffa600] mb-4">?</div>
+                <!-- Junior Audit -->
+                <div class="bg-white rounded-lg shadow-md p-6 w-full max-w-md text-center">
+                    <span class="text-sm font-semibold text-gray-500">Delegates To</span>
+                    <h3 class="text-2xl font-bold text-[#ef5675]">Junior Audit</h3>
+                    <p class="text-gray-600">Task Execution</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[#7a5195] mb-8 text-center">Comparative Role Focus</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-8">
+                The radar chart visualizes the relative involvement of each role across key audit areas, from high-level planning to on-the-ground execution.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="chart-container">
+                    <canvas id="roleFocusChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPDATED Key Retail Considerations with all 11 Areas and HR/Payroll change -->
+        <section>
+            <h2 class="text-3xl font-bold text-[#7a5195] mb-8 text-center">Key Retail Considerations: Audit Area Delegation</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-10">
+                To cover all company risks, the audit program includes these key functional areas, each with specific delegation rules.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- 1. Inventory -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#003f5c]">
+                    <div class="text-3xl mb-3 text-[#003f5c]">??</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Inventory</h3>
+                    <p class="text-gray-700 text-sm">Stock count plans are assigned by the <span class="font-semibold">Senior Audit</span> and must be approved by the <span class="font-semibold">Audit Manager</span>.</p>
+                </div>
+
+                <!-- 2. Cash Management -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#7a5195]">
+                    <div class="text-3xl mb-3 text-[#7a5195]">??</div>
+                    <h3 class="text-xl font-bold text-[#7a5195] mb-2">Cash Management</h3>
+                    <p class="text-gray-700 text-sm">Authority to perform cash counts is delegated to <span class="font-semibold">Junior/Senior Audits</span>, with random checks conducted by the <span class="font-semibold">Audit Manager</span>.</p>
+                </div>
+
+                <!-- 3. Compliance -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#bc5090]">
+                    <div class="text-3xl mb-3 text-[#bc5090]">??</div>
+                    <h3 class="text-xl font-bold text-[#bc5090] mb-2">Compliance</h3>
+                    <p class="text-gray-700 text-sm">Policy and regulatory adherence checks are executed by <span class="font-semibold">Junior Audit</span> under the review of <span class="font-semibold">Senior Audit</span>.</p>
+                </div>
+
+                <!-- 4. Supplier Management -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#ef5675]">
+                    <div class="text-3xl mb-3 text-[#ef5675]">??</div>
+                    <h3 class="text-xl font-bold text-[#ef5675] mb-2">Supplier Management</h3>
+                    <p class="text-gray-700 text-sm">Vendor contract and payment term review scope is determined by the <span class="font-semibold">Senior Audit</span>, reported to the <span class="font-semibold">Manager</span>.</p>
+                </div>
+
+                <!-- 5. Sales & Returns -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#ffa600]">
+                    <div class="text-3xl mb-3 text-[#ffa600]">??</div>
+                    <h3 class="text-xl font-bold text-[#ffa600] mb-2">Sales & Returns</h3>
+                    <p class="text-gray-700 text-sm">Sales revenue cut-off and return process integrity testing is executed by <span class="font-semibold">Junior Audit</span> for <span class="font-semibold">Senior Audit</span> review.</p>
+                </div>
+                
+                <!-- 6. Payable -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#003f5c]">
+                    <div class="text-3xl mb-3 text-[#003f5c]">??</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Payable</h3>
+                    <p class="text-gray-700 text-sm">Invoice verification and three-way matching review is done by <span class="font-semibold">Senior Audit</span>, with <span class="font-semibold">Manager</span> spot checks.</p>
+                </div>
+
+                <!-- 7. Receivable -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#7a5195]">
+                    <div class="text-3xl mb-3 text-[#7a5195]">??</div>
+                    <h3 class="text-xl font-bold text-[#7a5195] mb-2">Receivable</h3>
+                    <p class="text-gray-700 text-sm">Aged debtors analysis is performed by <span class="font-semibold">Senior Audit</span> for <span class="font-semibold">Manager</span> reporting on major risks.</p>
+                </div>
+
+                <!-- 8. Fixed Asset -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#bc5090]">
+                    <div class="text-3xl mb-3 text-[#bc5090]">???</div>
+                    <h3 class="text-xl font-bold text-[#bc5090] mb-2">Fixed Asset</h3>
+                    <p class="text-gray-700 text-sm">Physical existence verification is delegated to <span class="font-semibold">Junior Audit</span>, with reconciliation by <span class="font-semibold">Senior Audit</span>.</p>
+                </div>
+
+                <!-- 9. HR & Admin (Payroll Updated) -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#ef5675]">
+                    <div class="text-3xl mb-3 text-[#ef5675]">?????</div>
+                    <h3 class="text-xl font-bold text-[#ef5675] mb-2">HR & Admin (Incl. Payroll)</h3>
+                    <p class="text-gray-700 text-sm">Sensitive payroll and key HR compliance verification is executed by <span class="font-semibold">Senior Audit</span> and reviewed/approved by the <span class="font-semibold">Audit Manager</span>.</p>
+                </div>
+
+                <!-- 10. Expense -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#ffa600]">
+                    <div class="text-3xl mb-3 text-[#ffa600]">??</div>
+                    <h3 class="text-xl font-bold text-[#ffa600] mb-2">Expense</h3>
+                    <p class="text-gray-700 text-sm">Reimbursement and petty cash verification is handled by <span class="font-semibold">Junior Audit</span> up to specified approval limits.</p>
+                </div>
+
+                <!-- 11. Audit Follow-up (Follow up) -->
+                <div class="bg-white rounded-xl shadow-lg p-5 border-t-4 border-[#003f5c]">
+                    <div class="text-3xl mb-3 text-[#003f5c]">?</div>
+                    <h3 class="text-xl font-bold text-[#003f5c] mb-2">Audit Follow-up</h3>
+                    <p class="text-gray-700 text-sm">Responsibility for validating corrective actions is delegated to the <span class="font-semibold">Senior Audit</span>, with overall monitoring by the <span class="font-semibold">Audit Manager</span>.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 mt-16 py-8 border-t border-gray-200">
+            <p>&copy; 2025 Olympic Myanmar Apparel Co;Ltd Audit Department. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        (function() {
+            const roleFocusCtx = document.getElementById('roleFocusChart').getContext('2d');
+            
+            const wrapLabel = (label) => {
+                if (label.length > 16) {
+                    const words = label.split(' ');
+                    let currentLine = '';
+                    const lines = [];
+                    words.forEach((word, index) => {
+                        if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                            lines.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    });
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            };
+
+            const labels = [
+                'Strategy & Planning', 
+                'Risk Assessment', 
+                'Fieldwork Execution', 
+                'Review & Reporting', 
+                'Team Management'
+            ].map(wrapLabel);
+
+            const roleFocusData = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Audit Manager',
+                        data: [5, 5, 2, 5, 5],
+                        fill: true,
+                        backgroundColor: 'rgba(122, 81, 149, 0.2)',
+                        borderColor: 'rgb(122, 81, 149)',
+                        pointBackgroundColor: 'rgb(122, 81, 149)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(122, 81, 149)'
+                    },
+                    {
+                        label: 'Senior Audit',
+                        data: [3, 3, 5, 4, 4],
+                        fill: true,
+                        backgroundColor: 'rgba(188, 80, 144, 0.2)',
+                        borderColor: 'rgb(188, 80, 144)',
+                        pointBackgroundColor: 'rgb(188, 80, 144)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(188, 80, 144)'
+                    },
+                    {
+                        label: 'Junior Audit',
+                        data: [1, 2, 5, 2, 1],
+                        fill: true,
+                        backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                        borderColor: 'rgb(239, 86, 117)',
+                        pointBackgroundColor: 'rgb(239, 86, 117)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(239, 86, 117)'
+                    }
+                ]
+            };
+
+            const roleFocusConfig = {
+                type: 'radar',
+                data: roleFocusData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: '#e5e7eb'
+                            },
+                            grid: {
+                                color: '#f3f4f6'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 13,
+                                    family: 'Inter',
+                                },
+                                color: '#374151'
+                            },
+                            ticks: {
+                                backdropColor: 'white',
+                                backdropPadding: 3,
+                                beginAtZero: true,
+                                max: 5,
+                                stepSize: 1,
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: 'Inter',
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            new Chart(roleFocusCtx, roleFocusConfig);
+
+        })();
+    </script>
+
+</body>
+</html>
